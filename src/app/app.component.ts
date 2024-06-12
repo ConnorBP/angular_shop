@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { StoreProductListComponent } from './store-product-list/store-product-list.component';
 import { NavbarComponent } from "./navbar/navbar.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 @Component({
@@ -16,6 +17,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
   <hr>
   <br>
   <router-outlet></router-outlet>
+  <app-footer></app-footer>
 `,
     styleUrls: ['./app.component.css'],
     imports: [
@@ -23,7 +25,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
         RouterModule,
         HeaderComponent,
         StoreProductListComponent,
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent
     ]
 })
 export class AppComponent {

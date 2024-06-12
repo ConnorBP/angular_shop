@@ -1,0 +1,32 @@
+footer {
+    padding: 6pt;
+}
+
+footer p {
+    background-color: var(--background-color2);
+    border-radius: 2.5pt;
+    padding:6pt;
+    line-height: 18pt;
+    text-align: center;
+  }
+  
+  /* footer.ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 6pt;
+    overflow: hidden;
+    background-color: var(--background-color2);
+    border-radius: 2.5pt;
+  }
+  
+  footer li {
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    list-style-type: none;
+    white-space: nowrap;
+  }
+  
+  footer li.right {
+    float: right;
+  } */

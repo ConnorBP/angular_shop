@@ -50,6 +50,11 @@ p {
   font-size: 12pt;
 }
 
+ul.indent li {
+  position: relative;
+  left: 16pt;
+}
+
 /* for our very real quote */
 blockquote {
   background-color: #B2BEB5;
@@ -223,40 +228,8 @@ input[type="reset"] {
   margin: auto;
 }
 
-/* sexy footer box */
-footer {
-  background-color: var(--background-color2);
-  border-radius: 2.5pt;
-  padding-left: 0pt;
-  padding-right: 32pt;
-  padding-top: 2pt;
-  padding-bottom: 2pt;
-  line-height: 18pt;
-}
-
 ul.nodec {
   list-style-type: none;
-}
-
-footer.ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 6pt;
-  overflow: hidden;
-  background-color: var(--background-color2);
-  border-radius: 2.5pt;
-}
-
-footer li {
-  text-decoration: none;
-  overflow: hidden;
-  display: inline-block;
-  list-style-type: none;
-  white-space: nowrap;
-}
-
-footer li.right {
-  float: right;
 }
 
 ul.nature {
