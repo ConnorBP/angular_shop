@@ -4,105 +4,105 @@
       "name": "Ancient Tomb",
       "description": "Ancient Tomb enters the battlefield tapped and taps for 2 colorless mana at the cost of 2 life.",
       "price": 50.00,
-      "image_path": "./products/images/ancient_tomb.webp"
+      "image_path": "assets/products/images/ancient_tomb.webp"
   },
   {
       "id": 2,
       "name": "Birds of Paradise",
       "description": "Birds of Paradise is a mana dork that taps for one mana of any color.",
       "price": 15.00,
-      "image_path": "products/images/birds_of_paradise.webp"
+      "image_path": "assets/products/images/birds_of_paradise.webp"
   },
   {
       "id": 3,
       "name": "Blind Obedience",
       "description": "Blind Obedience is an enchantment that slows down opponents' artifacts and creatures, also gaining you life when they enter the battlefield tapped.",
       "price": 7.50,
-      "image_path": "products/images/blind_obediance.webp"
+      "image_path": "assets/products/images/blind_obediance.webp"
   },
   {
       "id": 4,
       "name": "Chord of Calling",
       "description": "Chord of Calling is an instant that allows you to search your library for a creature card with converted mana cost X or less and put it onto the battlefield.",
       "price": 25.00,
-      "image_path": "products/images/chord_of_calling.webp"
+      "image_path": "assets/products/images/chord_of_calling.webp"
   },
   {
       "id": 5,
       "name": "Crypt Ghast",
       "description": "Crypt Ghast is a creature that doubles the amount of black mana you generate when tapping swamps.",
       "price": 12.00,
-      "image_path": "products/images/crypt_ghast.webp"
+      "image_path": "assets/products/images/crypt_ghast.webp"
   },
   {
       "id": 6,
       "name": "Legion Warboss",
       "description": "Legion Warboss is a goblin creature that creates 1/1 goblin tokens at the beginning of combat on your turn.",
       "price": 8.00,
-      "image_path": "products/images/legion_warboss.webp"
+      "image_path": "assets/products/images/legion_warboss.webp"
   },
   {
       "id": 7,
       "name": "Mana Crypt (full art)",
       "description": "Mana Crypt is a powerful artifact that taps for 2 colorless mana, but it has a drawback of potentially dealing damage to you.",
       "price": 200.00,
-      "image_path": "products/images/mana_crypt.webp"
+      "image_path": "assets/products/images/mana_crypt.webp"
   },
   {
       "id": 8,
       "name": "Mana Crypt",
       "description": "Older version of Mana Crypt, this powerful artifact taps for 2 colorless mana, but it has a drawback of potentially dealing damage to you.",
       "price": 200.00,
-      "image_path": "products/images/mana_crypt2.webp"
+      "image_path": "assets/products/images/mana_crypt2.webp"
   },
   {
       "id": 9,
       "name": "Ragavan, Nimble Pilferer",
       "description": "Ragavan, Nimble Pilferer is a legendary monkey pirate that creates treasures when it deals combat damage to a player.",
       "price": 40.00,
-      "image_path": "products/images/ragavan.webp"
+      "image_path": "assets/products/images/ragavan.webp"
   },
   {
       "id": 10,
       "name": "Savra, Queen of the Golgari",
       "description": "Savra, Queen of the Golgari is a legendary creature that lets you sacrifice creatures to drain life from opponents.",
       "price": 20.00,
-      "image_path": "products/images/sarva.webp"
+      "image_path": "assets/products/images/sarva.webp"
   },
   {
       "id": 11,
       "name": "Sheoldred, Whispering One",
       "description": "Sheoldred, Whispering One is a powerful demon that brings creatures back from your graveyard and forces your opponents to sacrifice creatures.",
       "price": 30.00,
-      "image_path": "products/images/sheoldred.webp"
+      "image_path": "assets/products/images/sheoldred.webp"
   },
   {
       "id": 12,
       "name": "Sliver Queen",
       "description": "Sliver Queen is a legendary creature that allows you to pay mana to create sliver creature tokens.",
       "price": 100.00,
-      "image_path": "products/images/sliver_queen.webp"
+      "image_path": "assets/products/images/sliver_queen.webp"
   },
   {
       "id": 13,
       "name": "Temple Garden",
       "description": "Temple Garden is a dual land that can be tapped for green or white mana.",
       "price": 35.00,
-      "image_path": "products/images/temple_garden.webp"
+      "image_path": "assets/products/images/temple_garden.webp"
   },
   {
       "id": 14,
       "name": "Teysa, Orzhov Scion",
       "description": "Teysa, Orzhov Scion is a legendary creature that creates spirit tokens when your creatures die and has the ability to sacrifice creatures for various effects.",
       "price": 10.00,
-      "image_path": "products/images/teysa.webp"
+      "image_path": "assets/products/images/teysa.webp"
   },
   {
       "id": 15,
       "name": "Ulamog, the Infinite Gyre",
       "description": "Ulamog, the Infinite Gyre is a massive Eldrazi creature with annihilator and protection from colored spells.",
       "price": 80.00,
-      "image_path": "products/images/ulamog.webp"
+      "image_path": "assets/products/images/ulamog.webp"
   },
   {
       "id": 16,
