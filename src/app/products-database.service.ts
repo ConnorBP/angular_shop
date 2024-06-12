@@ -13,16 +13,8 @@ export class ProductsDatabaseService {
   public storeProducts: StoreProduct[] = [];
 
   constructor(private http: HttpClient) {
-    // const url: string = 'assets/products/product_database.json';
-    // console.log('loading data');
-    // this.http.get(url).subscribe((response) => {
-    //   console.trace('got response ', response);
-    //   this.storeProducts = response as StoreProduct[];
-    // });
-    this.loadProducts().subscribe(() => {
-
-      console.log(this.storeProducts);
-    });
+    // fetch products list from our "api" upon page load
+    this.loadProducts().subscribe();
   }
 
   // // get all of the products
@@ -30,10 +22,10 @@ export class ProductsDatabaseService {
   //   return this.storeProducts;
   // }
 
-  // load all of the products from the server
+  // load all of the products from the server.
+  // Stores result automatically, but the returned Observable must be subscribed.
   public loadProducts(): Observable<StoreProduct[]> {
     const url: string = 'assets/products/product_database.json';
-    console.info('loading product data');
     return this.http.get(url).pipe(map(response => this.storeProducts = response as StoreProduct[]));
   }
 
