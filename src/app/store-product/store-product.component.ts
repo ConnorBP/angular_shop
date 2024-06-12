@@ -7,7 +7,7 @@ import { StoreProduct } from '../store-product';
   imports: [],
   template: `
     <div class="grid-item bg hasTooltip">
-        <div class="center-text center-all">
+        <div class="product center-text center-all">
             <img [src]="productInformation.image_path" alt="Product image for {{productInformation.name}}.">
             <h5>{{productInformation.name}}</h5>
         </div>

@@ -260,11 +260,14 @@ ul.nature li {
   position:relative;
 }
 .hasTooltip span {
-  display:none;
+  display:block;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .hasTooltip:hover span {
-  display:block;
+  visibility: visible;
   background-color:black;
   border-radius:5px;
   color:white;
@@ -274,6 +277,7 @@ ul.nature li {
   top:-1.6em;
   left:2.5%;   
   max-width:90%;
+  opacity: 1;
 }
 
 /* mobile adaptation stuff */
