@@ -1,6 +1,6 @@
 // base imports
 import { Component, Inject, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 // components
 import { StoreProductComponent  } from '../store-product/store-product.component';
@@ -16,6 +16,7 @@ import { ProductsDatabaseService } from '../products-database.service';
   imports: [
     StoreProductComponent,
     NgFor,
+    NgIf,
   ],
   template: `
     <h2>Products</h2>
