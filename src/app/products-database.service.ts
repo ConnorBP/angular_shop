@@ -46,7 +46,6 @@ export class ProductsDatabaseService {
   // returns as a promise pending api the constructors api fetch
   public getProductById(id: number): Promise<StoreProduct | undefined> {
     if (this.productsLoaded) {
-      console.log('products were already loaded')
       return Promise.resolve(this.storeProducts.find(product => product.id === id));
     } else {
       return this.productsLoadedPromise!.then(() => {
