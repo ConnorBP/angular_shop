@@ -44,6 +44,20 @@ h6 {
     font-weight: 600;
 }
 
+/* set paragraph font and size for if we want to adjust it later */
+p {
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 12pt;
+}
+
+/* for our very real quote */
+blockquote {
+  background-color: #B2BEB5;
+  padding: 4pt;
+  border-radius: 2.5pt;
+  text-align: center;
+}
+
 /* pad around the page */
 .container {
   padding: 8pt;

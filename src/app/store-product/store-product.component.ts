@@ -16,12 +16,18 @@ import { StoreProduct } from '../store-product';
             {{productInformation.description}}
           </span>
         <!-- </blockquote> -->
-        <p><b>Price: </b>\${{productInformation.price}} CAD</p>
+        <p><b>Price: </b>{{formatPrice(productInformation.price)}}</p>
     </div>
   `,
   styleUrl: './store-product.component.css'
 })
 export class StoreProductComponent {
+formatPrice(price: number): string {
+  return `${Number(price).toLocaleString(undefined, { 
+    style: "currency", 
+    currency: "CAD" // todo: put store currency in a config file/state. For demo this is fine.
+  })}`;
+}
   @Input() productInformation!: StoreProduct;
   
 }

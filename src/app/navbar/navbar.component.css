@@ -1,0 +1,39 @@
+
+/* make a nav bar */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 6pt;
+    overflow: hidden;
+    background-color: #eeeddb;
+    border-radius: 2.5pt;
+    /* width: 100px; */
+}
+ul.navbar li {
+    float: left;
+    text-align: center;
+}
+ul.navbar li a {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    display: block;
+    color: #2D3142;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a.active {
+    color:#dc8051;
+    font-size: 12pt;
+    font-weight: 1600;
+}
+
+ul.navbar li.right {float: right;}
+
+ul.navbar li a:hover:not(.active) {
+    border-radius: 2.5pt;
+    background-color: #4F5D75;
+    color: #F5F5F5;
+}
