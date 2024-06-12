@@ -1,0 +1,55 @@
+header {
+    text-align: left;
+}
+
+/* banner image background on the header */
+header.banner {
+    background-image: url('/assets/magic_banner1.JPG');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+
+    padding: 15pt;
+    border-radius: 2.5pt;
+}
+
+header.banner h1,
+header.banner h2,
+header.banner h3,
+header.banner h4,
+header.banner h5,
+header.banner h6 {
+    text-shadow:
+    0 0 7px #fa55,
+    0 0 10px #fb55,
+    0 0 21px #fc55,
+    0 0 42px #0fa5,
+    0 0 82px #0fc5,
+    0 0 92px #0fd5,
+    0 0 102px #0fe5,
+    0 0 151px #0ffd;
+}
+
+/* header logo style stuff */
+header img.logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+}
+
+header h1 {
+    position: relative;
+    top: 8pt;
+}
+
+header h1,
+header h2,
+header h3,
+header h4
+header h5,
+header h6 {
+    position: relative;
+    left: 10pt;
+    padding: 4pt;
+    color: var(--background-color)
+}
