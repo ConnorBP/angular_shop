@@ -4,7 +4,9 @@
 */
 import { bootstrapApplication,provideProtractorTestingSupport } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
+import { provideHttpClient } from '@angular/common/http';
+import { ProductsDatabaseService } from './app/products-database.service';
 
 bootstrapApplication(AppComponent,
-    {providers: [provideProtractorTestingSupport()]})
+    {providers: [provideProtractorTestingSupport(), provideHttpClient(), ProductsDatabaseService]})
   .catch(err => console.error(err));
