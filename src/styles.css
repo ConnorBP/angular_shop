@@ -8,12 +8,14 @@
   padding: 0;
 }
 
+/* core theme colors */
 :root {
-  --primary-color: #605DC8;
-  --secondary-color: #8B89E6;
+  --primary-color: #02687f;
+  --secondary-color: #9ed6cb;
   --accent-color: #e8e7fa;
-  --shadow-color: #E8E8E8;
+  --shadow-color: #09173c;
   --background-color: #f3e5c8;
+  --background-color2: #f5c998;
   --text-color:#151618;
 }
 
@@ -152,13 +154,12 @@ input.radio {
   /* padding: 0px 1em 0px 1em; */
 }
 
-
 input[type="submit"] {
   /* grid-column: 1/1; */
   float: left;
   display: inline;
   width: 50%;
-  background-color: #AAC;
+  background-color: var(--accent-color);
   border-radius: 5pt;
 }
 input[type="reset"] {
@@ -171,14 +172,14 @@ input[type="reset"] {
 }
 
 .bg {
-  background-color: #f5c998;
+  background-color: var(--background-color2);
   border-radius: 2.5pt;
 }
 
-.green-gradient {
+.gradient {
   /* width: 100vw; */
-  background-color: #AFA; /* For browsers that do not support gradients */
-  background-image: linear-gradient(#FFF, #AFA, #085);
+  background-color: var(--accent-color); /* For browsers that do not support gradients */
+  background-image: linear-gradient(var(--accent-color), var(--secondary-color), var(--primary-color));
   /* width: 100%; */
 }
 
@@ -210,7 +211,7 @@ input[type="reset"] {
 
 /* sexy footer box */
 footer {
-  background-color: #D4DAD5;
+  background-color: var(--background-color2);
   border-radius: 2.5pt;
   padding-left: 0pt;
   padding-right: 32pt;
@@ -228,7 +229,7 @@ footer.ul {
   margin: 0;
   padding: 6pt;
   overflow: hidden;
-  background-color: #D4DAD5;
+  background-color: var(--background-color2);
   border-radius: 2.5pt;
 }
 
