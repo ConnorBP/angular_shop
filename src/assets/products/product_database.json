@@ -103,6 +103,12 @@
       "description": "Ulamog, the Infinite Gyre is a massive Eldrazi creature with annihilator and protection from colored spells.",
       "price": 80.00,
       "image_path": "products/images/ulamog.webp"
-    }
-  ]
-  
+  },
+  {
+      "id": 16,
+      "name": "Narset, Enlightened Master",
+      "description": "First strike, hexproof. Whenever Narset, Enlightened Master attacks, exile the top four cards of your library. Until end of turn, you may cast noncreature spells from among those cards without paying their mana costs.",
+      "price": 25.00,
+      "image_path": "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=386616&type=card"
+  }
+]
