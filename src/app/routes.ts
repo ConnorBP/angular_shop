@@ -9,12 +9,14 @@ const routeConfig: Routes = [
     {
       path: '',
       component: HomeComponent,
-      title: 'Home page'
+      title: 'Home page',
+      data: {animation: 'HomePage'},
     },
     {
         path: 'about',
         component: AboutComponent,
-        title: 'About Us'
+        title: 'About Us',
+        data: {animation: 'AboutPage'},
     },
     {
         path: 'login',
