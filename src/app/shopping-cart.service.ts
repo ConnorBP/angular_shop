@@ -45,6 +45,16 @@ export class ShoppingCartService {
     this.updateCartCount();
   }
 
+  // clears the contents of the cart
+  public clear() {
+    this.cartItems = [];
+
+    // commit to local storage
+    this.storeLocal();
+    // update cart counts and prices
+    this.updateCartCount();
+  }
+
   // updates the item count of our cart
   public updateCartCount() {
     let count = 0;
