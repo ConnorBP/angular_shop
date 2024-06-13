@@ -1,6 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { StoreProduct } from '../store-product';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import Utils from '../utils';
+
+import { StoreProduct } from '../store-product';
 import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
@@ -23,20 +25,23 @@ import { ShoppingCartService } from '../shopping-cart.service';
             {{productInformation.description}}
           </span>
         <!-- </blockquote> -->
-        <p><b>Price: </b>{{formatPrice(productInformation.price)}}</p>
+        <p><b>Price: </b>{{formattedPrice}}</p>
         <button (click)="shopingCartService.addItem(productInformation)">Add To Cart</button>
     </div>
   `,
   styleUrl: './store-product.component.css'
 })
-export class StoreProductComponent {
-  constructor(public shopingCartService: ShoppingCartService) {}
+export class StoreProductComponent implements OnInit {
 
-  formatPrice(price: number): string {
-    return `${Number(price).toLocaleString(undefined, {
-      style: "currency",
-      currency: "CAD" // todo: put store currency in a config file/state. For demo this is fine.
-    })}`;
+  formattedPrice: string = "";
+
+  constructor(public shopingCartService: ShoppingCartService) {
+    // input vars not yet ready here
   }
+
+  ngOnInit(): void {
+    this.formattedPrice = Utils.formatPrice(this.productInformation.price);
+  }
+
   @Input() productInformation!: StoreProduct;
 }
