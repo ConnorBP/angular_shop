@@ -55,6 +55,16 @@ ul.indent li {
   left: 16pt;
 }
 
+.flayout {
+  display: flex;
+  vertical-align: center;
+  justify-content: space-between;
+}
+
+.fright {
+  justify-content: flex-end;
+}
+
 /* for our very real quote */
 blockquote {
   background-color: #B2BEB5;
@@ -70,6 +80,19 @@ blockquote {
 
 .container-2 {
   padding: 24pt;
+}
+
+/* flexbox */
+
+.flexbox {
+  /* Use a flexbox layout */
+	display: flex;
+	
+	/* Make a horizontal flexbox (the default) */
+	flex-direction: row;
+	
+	/* center stuff vertically */
+	align-items: center;
 }
 
 /* lay stuff out in a grid */
@@ -192,6 +215,11 @@ input[type="reset"] {
 
 .bg {
   background-color: var(--background-color2);
+  border-radius: 2.5pt;
+}
+
+.bg2 {
+  background-color: var(--background-color);
   border-radius: 2.5pt;
 }
 

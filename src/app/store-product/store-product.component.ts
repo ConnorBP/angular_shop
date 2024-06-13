@@ -30,15 +30,21 @@ import { ShoppingCartService } from '../shopping-cart.service';
             {{productInformation.description}}
           </span>
         </div>
+        <br>
         <div>
-          <p><b>Price: </b>{{formattedPrice}}</p>
-          <button mat-raised-button
-                  [matTooltipDisabled]="true"
-                  (click)="shopingCartService.addItem(productInformation);displayTooltip();"
-                  matTooltip="Added to cart!"
-                  #cartToolTip="matTooltip">
-            Add To Cart
-          </button>
+          <div class="flayout">
+            <div class="flexbox bg2 container"><b>Price: </b>{{formattedPrice}}</div>
+            <div class="right">
+              <button mat-raised-button
+                      [matTooltipDisabled]="true"
+                      (click)="shopingCartService.addItem(productInformation);displayTooltip();"
+                      matTooltip="Added to cart!"
+                      #cartToolTip="matTooltip">
+                Add To Cart
+              </button>
+          </div>
+          </div>
+          
         </div>
     </div>
   `,
