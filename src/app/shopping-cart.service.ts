@@ -11,6 +11,7 @@ const lsk = 'cart';
 export class ShoppingCartService {
 
   public cartItems: ShoppingCartItems = {};
+  public cartItemCount: number = 0;
 
   constructor() {
     const localStorageString = localStorage.getItem(lsk);
@@ -21,6 +22,7 @@ export class ShoppingCartService {
         this.cartItems = ls;
       }
     }
+    this.updateCartCount();
   }
 
   public addItem(newItem: StoreProduct) {
@@ -39,6 +41,18 @@ export class ShoppingCartService {
 
     // commit to local storage
     this.storeLocal();
+
+    this.updateCartCount();
+  }
+
+  // updates the item count of our cart
+  public updateCartCount() {
+    let count = 0;
+    for(const key in this.cartItems) {
+      // add the item count of each cart item to our total
+      count+= this.cartItems[key].quantity;
+    }
+    this.cartItemCount = count;
   }
 
   // sets the local storage with our current cart state
