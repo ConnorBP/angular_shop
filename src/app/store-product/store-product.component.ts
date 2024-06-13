@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { StoreProduct } from '../store-product';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'store-product',
@@ -23,11 +24,14 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           </span>
         <!-- </blockquote> -->
         <p><b>Price: </b>{{formatPrice(productInformation.price)}}</p>
+        <button (click)="shopingCartService.addItem(productInformation)">Add To Cart</button>
     </div>
   `,
   styleUrl: './store-product.component.css'
 })
 export class StoreProductComponent {
+  constructor(public shopingCartService: ShoppingCartService) {}
+
   formatPrice(price: number): string {
     return `${Number(price).toLocaleString(undefined, {
       style: "currency",

@@ -9,6 +9,7 @@ import { ProductsDatabaseService } from './app/products-database.service';
 // Routing:
 import { provideRouter } from '@angular/router';
 import routeConfig from './app/routes';
+import { ShoppingCartService } from './app/shopping-cart.service';
 
 bootstrapApplication(
   AppComponent,
@@ -17,6 +18,7 @@ bootstrapApplication(
       provideProtractorTestingSupport(),
       provideHttpClient(),
       ProductsDatabaseService,
+      ShoppingCartService,
       provideRouter(routeConfig),
     ]
   }
