@@ -7,10 +7,10 @@
             <a routerLinkActive="active" [routerLink]="['/about']">About</a>
         </li>
         <li class="right">
-            <a routerLinkActive="active" [routerLink]="['/cart']">Cart <mat-icon [matBadge]="shoppingCartService.cartItemCount" matBadgeColor="warn">shopping_cart</mat-icon><ng-template [ngIf]="shoppingCartService.cartItemCount > 0">({{shoppingCartService.cartPriceFormatted}})</ng-template></a>
+            <a routerLinkActive="active" [routerLink]="['/cart']">Cart <mat-icon [matBadge]="shoppingCartService.cartItemCount" matBadgeColor="accent">shopping_cart</mat-icon><ng-template [ngIf]="shoppingCartService.cartItemCount > 0">({{shoppingCartService.cartPriceFormatted}})</ng-template></a>
         </li>
         <li class="right">
-            <a routerLinkActive="active" [routerLink]="['/login']">Login</a>
+            <a routerLinkActive="active" [routerLink]="['/login']">Login <mat-icon matBadgeColor="accent">login</mat-icon></a>
         </li>
     </ul>
 </nav>
