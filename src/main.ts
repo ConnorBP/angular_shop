@@ -11,7 +11,7 @@ import { provideRouter } from '@angular/router';
 import routeConfig from './app/routes';
 import { ShoppingCartService } from './app/shopping-cart.service';
 // Animation:
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 bootstrapApplication(
   AppComponent,
@@ -19,7 +19,7 @@ bootstrapApplication(
       providers: [
       provideProtractorTestingSupport(),
       provideHttpClient(),
-      provideAnimations(),
+      provideAnimationsAsync(),
       ProductsDatabaseService,
       ShoppingCartService,
       provideRouter(routeConfig),
