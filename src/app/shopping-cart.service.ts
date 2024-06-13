@@ -47,7 +47,7 @@ export class ShoppingCartService {
 
   // clears the contents of the cart
   public clear() {
-    this.cartItems = [];
+    this.cartItems = {};
 
     // commit to local storage
     this.storeLocal();
