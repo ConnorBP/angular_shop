@@ -1,6 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import Utils from '../utils';
+
+import {MatTooltip, MatTooltipModule} from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
 
 import { StoreProduct } from '../store-product';
 import { ShoppingCartService } from '../shopping-cart.service';
@@ -10,33 +13,53 @@ import { ShoppingCartService } from '../shopping-cart.service';
   standalone: true,
   imports: [
     RouterLink,
-    RouterOutlet
+    RouterOutlet,
+    MatTooltipModule,
+    MatButtonModule
   ],
   template: `
-    <div class="grid-item bg hasTooltip">
-        <div class="product center-text center-all">
-            <a [routerLink]="['/details', productInformation.id]">
-              <img [src]="productInformation.image_path" alt="Product image for {{productInformation.name}}.">
-            </a>
-            <h5>{{productInformation.name}}</h5>
-        </div>
-        <!-- <blockquote class="grid-item center-v"> -->
+    <div class="grid-item bg">
+        <div class="hasTooltip">
+          <div class="product center-text center-all">
+              <a [routerLink]="['/details', productInformation.id]">
+                <img [src]="productInformation.image_path" alt="Product image for {{productInformation.name}}.">
+              </a>
+              <h5>{{productInformation.name}}</h5>
+          </div>
           <span>
             {{productInformation.description}}
           </span>
-        <!-- </blockquote> -->
-        <p><b>Price: </b>{{formattedPrice}}</p>
-        <button (click)="shopingCartService.addItem(productInformation)">Add To Cart</button>
+        </div>
+        <div>
+          <p><b>Price: </b>{{formattedPrice}}</p>
+          <button mat-raised-button
+                  [matTooltipDisabled]="true"
+                  (click)="shopingCartService.addItem(productInformation);displayTooltip();"
+                  matTooltip="Added to cart!"
+                  #cartToolTip="matTooltip">
+            Add To Cart
+          </button>
+        </div>
     </div>
   `,
   styleUrl: './store-product.component.css'
 })
 export class StoreProductComponent implements OnInit {
 
+  @ViewChild("cartToolTip") cartToolTip!: MatTooltip;
+
   formattedPrice: string = "";
 
   constructor(public shopingCartService: ShoppingCartService) {
     // input vars not yet ready here
+  }
+
+  public displayTooltip(){
+    this.cartToolTip.disabled = false;
+    this.cartToolTip.show()
+    setTimeout(() => {
+      this.cartToolTip.disabled = true;
+    }, 1000);
   }
 
   ngOnInit(): void {
