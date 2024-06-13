@@ -21,7 +21,7 @@ export class ProductsDatabaseService {
     // fetch products list from our "api" upon page load
 
     // for demo purposes this will simulate a server response delay
-    const fakeServerDelay: number = 3000;
+    const fakeServerDelay: number = 1200;
 
     this.productsLoadedPromise = firstValueFrom(this.loadProducts().pipe(delay(fakeServerDelay))).then((product) => {
       if(product.length > 0) {
