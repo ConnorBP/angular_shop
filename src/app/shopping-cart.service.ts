@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CartItem, ShoppingCartItems } from './cart-item';
+import Utils from './utils';
+
+import { ShoppingCartItems } from './cart-item';
 import { StoreProduct } from './store-product';
 
 // the local storage key
@@ -12,6 +14,8 @@ export class ShoppingCartService {
 
   public cartItems: ShoppingCartItems = {};
   public cartItemCount: number = 0;
+  public cartPrice: number = 0;
+  public cartPriceFormatted: string = "$0.00";
 
   constructor() {
     const localStorageString = localStorage.getItem(lsk);
@@ -58,11 +62,19 @@ export class ShoppingCartService {
   // updates the item count of our cart
   public updateCartCount() {
     let count = 0;
+    let price = 0;
     for(const key in this.cartItems) {
-      // add the item count of each cart item to our total
-      count+= this.cartItems[key].quantity;
+      // store the quantity of the current item
+      let q = this.cartItems[key].quantity;
+      // accumulate the item cost times item quantity
+      price+= this.cartItems[key].product.price * q;
+      // add the item quantity of this cart item to our running total
+      count+= q;
     }
+    // finally store the result
     this.cartItemCount = count;
+    this.cartPrice = price;
+    this.cartPriceFormatted = Utils.formatPrice(price);
   }
 
   // sets the local storage with our current cart state
