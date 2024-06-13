@@ -23,7 +23,11 @@ ul.navbar li a {
     padding: 8px 16px;
     text-decoration: none;
     min-height: 32pt;
-    line-height: 32pt;
+
+    /* for centering contents vertically */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 ul.navbar li a.active {
