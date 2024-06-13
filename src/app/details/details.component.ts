@@ -5,13 +5,14 @@ import { ActivatedRoute } from '@angular/router';
 import { ProductsDatabaseService } from '../products-database.service';
 import { StoreProduct } from '../store-product';
 import { NgIf } from '@angular/common';
-import { asyncScheduler } from 'rxjs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [
     NgIf,
+    MatProgressSpinnerModule
   ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'

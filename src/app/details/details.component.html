@@ -1,9 +1,19 @@
-<div *ngIf="productsDatabase.productsLoaded" class="container">
-    <h3>{{productDetails?.name}}</h3>
-    <ul class="">
-        <li><b>Description: </b><p>{{productDetails?.description}}</p></li>
-        <li><b>Store Item ID: </b><p>{{productDetails?.id}}</p></li>
-        <li><b>Price: </b><p>{{productDetails?.price}}</p></li>
-    </ul>
+<div class="fill bg container">
+    <div *ngIf="productsDatabase.productsLoaded; else spinner" class="container">
+        <h3>{{productDetails?.name}}</h3>
+        <ul class="indent">
+            <li><b>Description: </b><p>{{productDetails?.description}}</p></li>
+            <li><b>Store Item ID: </b><p>{{productDetails?.id}}</p></li>
+            <li><b>Price: </b><p>{{productDetails?.price}}</p></li>
+        </ul>
+    </div>
+    <ng-template #spinner>
+        <div>
+            <mat-progress-spinner
+                class="center"
+                color="red"
+                mode="indeterminate">
+            </mat-progress-spinner>
+        </div>
+    </ng-template>
 </div>
-

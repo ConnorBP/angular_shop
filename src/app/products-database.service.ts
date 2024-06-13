@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { StoreProduct } from './store-product';
-import { Observable, firstValueFrom, map } from 'rxjs';
+import { Observable, delay, firstValueFrom, map } from 'rxjs';
 import { Resolve } from '@angular/router';
 
 @Injectable(
@@ -19,20 +19,26 @@ export class ProductsDatabaseService {
 
   constructor(private http: HttpClient) {
     // fetch products list from our "api" upon page load
-    this.productsLoadedPromise = firstValueFrom(this.loadProducts()).then((product) => {
+
+    // for demo purposes this will simulate a server response delay
+    const fakeServerDelay: number = 3000;
+
+    this.productsLoadedPromise = firstValueFrom(this.loadProducts().pipe(delay(fakeServerDelay))).then((product) => {
       if(product.length > 0) {
         this.productsLoaded = true;
+        this.productsLoadedPromise = Promise.resolve(true);
         return true;
       } else {
         this.productsLoaded = false;
+        this.productsLoadedPromise = Promise.resolve(false);
         return false;
       }
     });
 
-    this.loadProducts().subscribe((response) => {
-      this.productsLoadedPromise = Promise.resolve(true);
-      console.log('finished loading products')
-    });
+    // this.loadProducts().subscribe((response) => {
+    //   this.productsLoadedPromise = Promise.resolve(true);
+    //   console.log('finished loading products')
+    // });
   }
 
   // load all of the products from the server.
