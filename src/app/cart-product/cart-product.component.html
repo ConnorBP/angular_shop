@@ -21,6 +21,6 @@
         <mat-form-field>
             <input type="number" min="1" step="1" [value]="cartItemInformation.quantity" matInput (change)="updateQuantity($event)">
         </mat-form-field>
-        <button mat-raised-button><mat-icon>remove_shopping_cart</mat-icon> Remove</button>
+        <button mat-raised-button (click)="removeFromCart()"><mat-icon>remove_shopping_cart</mat-icon> Remove</button>
     </mat-card-actions>
 </mat-card>

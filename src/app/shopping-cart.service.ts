@@ -59,9 +59,22 @@ export class ShoppingCartService {
     this.updateCartCount();
   }
 
+  // Removes all of a product from the cart if it is in there
+  public removeProduct(productId: number) {
+    if(this.cartItems[productId]) {
+      delete this.cartItems[productId];
+    }
+
+    // update local storage and display values
+    this.storeLocal();
+    this.updateCartCount();
+  }
+
   // update the quantity of an item by product id if the id is in the cart
   public updateProductQuantity(productId: number, quantity: number) {
     if(this.cartItems[productId]) {
+
+      // guard setting of quantity to a negative value
       if(quantity > 0) {
         this.cartItems[productId].quantity = quantity;
       } else {
@@ -69,6 +82,7 @@ export class ShoppingCartService {
       }
     };
 
+    // update local storage and display values
     this.storeLocal();
     this.updateCartCount();
   }

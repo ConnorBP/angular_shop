@@ -33,5 +33,9 @@ export class CartProductComponent {
     // console.log('changed quantity to ',newNumber, ' resulting in ', this.cartItemInformation);
   }
 
+  public removeFromCart() {
+    this.cartService.removeProduct(this.cartItemInformation.product.id);
+  }
+
   @Input() cartItemInformation!: CartItem;
 }
