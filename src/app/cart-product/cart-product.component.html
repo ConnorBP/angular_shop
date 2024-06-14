@@ -2,7 +2,7 @@
     <mat-card-header>
       <mat-card-title-group>
         <mat-card-title>{{ cartItemInformation.product.name }}</mat-card-title>
-        <mat-card-subtitle>Product Id: {{ cartItemInformation.product.id }}</mat-card-subtitle>    
+        <mat-card-subtitle>Product Id: {{ cartItemInformation.product.id }} Item Price: {{ formattedUnitPrice }}</mat-card-subtitle>    
       </mat-card-title-group>
     </mat-card-header>
     <div class="flayout">
@@ -21,6 +21,9 @@
         <mat-form-field>
             <input type="number" min="1" step="1" [value]="cartItemInformation.quantity" matInput (change)="updateQuantity($event)">
         </mat-form-field>
+        <div>
+            <p><b>Total: </b> {{ formattedTotalPrice }}</p>
+        </div>
         <button mat-raised-button (click)="removeFromCart()"><mat-icon>remove_shopping_cart</mat-icon> Remove</button>
     </mat-card-actions>
 </mat-card>

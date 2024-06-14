@@ -1,30 +1,33 @@
-<mat-card>
-    <mat-card-header>
-        <mat-card-title-group>
-            <mat-card-title>Checkout</mat-card-title>
-            <mat-card-subtitle>Checking out with X items</mat-card-subtitle>    
-          </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content>
-        <div class="grid-containerl-2">
-            <div class="grid-item bg">
-                <form action="">
-                    <mat-form-field hintLabel="As shown on your ID card.">
-                        <mat-label>Enter your full name</mat-label>
-                        <input matInput maxlength="48" placeholder="Ex. John Danger Smith" />
-                        <!-- <mat-hint align="end">{{value().length}}/10</mat-hint> -->
-                    </mat-form-field>
-                
-                    <mat-form-field hintLabel="super secret">
-                        <mat-label>Enter something secret</mat-label>
-                        <input matInput type="password" maxlength="48" placeholder="Ex. 1234" />
-                        <!-- <mat-hint align="end">{{value().length}}/10</mat-hint> -->
-                    </mat-form-field>
-                </form>
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title>Checkout</mat-card-title>
+                <mat-card-subtitle>Checking out with X items</mat-card-subtitle>    
+              </mat-card-title-group>
+        </mat-card-header>
+        <hr>
+        <mat-card-content>
+            <div class="grid-containerl-2">
+                <div class="grid-item bg">
+                    <form action="">
+                        <mat-form-field hintLabel="As shown on your ID card.">
+                            <mat-label>Enter your full name</mat-label>
+                            <input matInput maxlength="48" placeholder="Ex. John Danger Smith" />
+                            <!-- <mat-hint align="end">{{value().length}}/10</mat-hint> -->
+                        </mat-form-field>
+                    
+                        <mat-form-field hintLabel="super secret">
+                            <mat-label>Enter something secret</mat-label>
+                            <input matInput type="password" maxlength="48" placeholder="Ex. 1234" />
+                            <!-- <mat-hint align="end">{{value().length}}/10</mat-hint> -->
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div class="grid-item">b</div>
+                <div class="grid-item">c</div>
+                <div class="grid-item bg"><button mat-raised-button>Complete Checkout<mat-icon>point_of_sale</mat-icon></button></div>
             </div>
-            <div class="grid-item">b</div>
-            <div class="grid-item">c</div>
-            <div class="grid-item bg">d</div>
-        </div>
-    </mat-card-content>
-</mat-card>
+        </mat-card-content>
+    </mat-card>
+</div>

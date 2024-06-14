@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { CartItem } from '../cart-item';
@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { Event } from '@angular/router';
+import Utils from '../utils';
 
 @Component({
   selector: 'app-cart-product',
@@ -25,7 +25,18 @@ import { Event } from '@angular/router';
 })
 export class CartProductComponent {
 
+  perItemPriceFormatted: string = "";
+  totalPriceFormatted: string = "";
+
   constructor(private cartService: ShoppingCartService) {}
+
+  get formattedUnitPrice() {
+    return Utils.formatPrice(this.cartItemInformation.product.price);
+  }
+
+  get formattedTotalPrice() {
+    return Utils.formatPrice(this.cartItemInformation.product.price * this.cartItemInformation.quantity);
+  }
 
   public updateQuantity(e: any) {
     let newNumber = Number(e.target.value);
