@@ -28,7 +28,6 @@ import { slideInAnimation } from './animations';
         RouterModule,
         RouterOutlet,
         HeaderComponent,
-        StoreProductListComponent,
         NavbarComponent,
         FooterComponent,
     ],

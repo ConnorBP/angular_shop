@@ -11,11 +11,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
   imports: [
+    RouterModule,
     CartProductListComponent,
     NgFor,
     JsonPipe,

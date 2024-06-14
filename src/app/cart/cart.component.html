@@ -20,12 +20,12 @@
                   </mat-card-content>
                   <mat-card-actions class="flayout">
                     <button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button>
-                    <button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button>
+                    <button mat-raised-button [routerLink]="['checkout']"><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button>
                   </mat-card-actions>
             </mat-card>
             
         </div>
         <div class="grid-item"><button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button></div>
-        <div class="grid-item bg"><button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button></div>
+        <div class="grid-item bg"><button mat-raised-button [routerLink]="['checkout']"><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button></div>
     </div>
 </div>
