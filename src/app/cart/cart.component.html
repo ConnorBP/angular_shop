@@ -3,9 +3,9 @@
     <div class="grid-containerl-2 grid-spaced">
         <div class="grid-item">
             <app-cart-product-list></app-cart-product-list>
-            <p>
+            <!-- <p>
                 {{ shoppingCartService.cartItems | json }}
-            </p>
+            </p> -->
         </div>
         <div class="grid-item">
             <mat-card>
@@ -16,9 +16,9 @@
                     </mat-card-title-group>
                   </mat-card-header>
                   <mat-card-content>
-                    <b>Taxes and shipping calculated at checkout.</b>Total cart comes to
+                    <b>Taxes and shipping calculated at checkout.</b>
                   </mat-card-content>
-                  <mat-card-actions>
+                  <mat-card-actions class="flayout">
                     <button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button>
                     <button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button>
                   </mat-card-actions>
