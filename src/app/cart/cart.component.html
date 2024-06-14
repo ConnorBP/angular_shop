@@ -2,14 +2,14 @@
 <div id="cart" class="grid-container-4 grid-spaced">
     <div class="grid-container-3 grid-spaced">
         <div class="grid-item">
+            <app-cart-product-list></app-cart-product-list>
             <p>
                 {{ shoppingCartService.cartItems | json }}
             </p>
         </div>
         <div class="grid-item">{{shoppingCartService.cartItemCount}} Items</div>
         <div class="grid-item bg">Price: {{shoppingCartService.cartPriceFormatted}}</div>
-        <div class="grid-item"><button (click)="shoppingCartService.clear()">Clear Cart</button></div>
+        <div class="grid-item"><button mat-raised-button (click)="shoppingCartService.clear()">Clear Cart</button></div>
         <div class="grid-item bg">Checkout <mat-slide-toggle>Toggle me!</mat-slide-toggle></div>
     </div>
-    
 </div>

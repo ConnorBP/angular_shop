@@ -1,0 +1,20 @@
+<mat-card class="cart-item-card">
+    
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{ cartItemInformation.product.name }}</mat-card-title>
+        <mat-card-subtitle>Product Id: {{ cartItemInformation.product.id }}</mat-card-subtitle>
+        <img mat-card-sm-image [src]="cartItemInformation.product.image_path" >
+        
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      {{cartItemInformation.product.description}}
+    </mat-card-content>
+    <mat-card-actions class="flayout">
+        <mat-form-field>
+            <input type="number" matInput [(ngModel)]="cartItemInformation.quantity" (change)="updateQuantity()">
+        </mat-form-field>
+        <button mat-raised-button><mat-icon>remove_shopping_cart</mat-icon> Remove</button>
+    </mat-card-actions>
+</mat-card>
