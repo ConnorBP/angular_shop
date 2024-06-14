@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { Event } from '@angular/router';
 
 @Component({
   selector: 'app-cart-product',
@@ -26,9 +27,10 @@ export class CartProductComponent {
 
   constructor(private cartService: ShoppingCartService) {}
 
-  public updateQuantity() {
-    this.cartService.updateProductQuantity(this.cartItemInformation.product.id,this.cartItemInformation.quantity);
-    console.log('changed quantity to ',this.cartItemInformation.quantity);
+  public updateQuantity(e: any) {
+    let newNumber = Number(e.target.value);
+    this.cartService.updateProductQuantity(this.cartItemInformation.product.id,newNumber);
+    // console.log('changed quantity to ',newNumber, ' resulting in ', this.cartItemInformation);
   }
 
   @Input() cartItemInformation!: CartItem;

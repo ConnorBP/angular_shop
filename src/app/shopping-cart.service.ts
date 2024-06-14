@@ -61,7 +61,13 @@ export class ShoppingCartService {
 
   // update the quantity of an item by product id if the id is in the cart
   public updateProductQuantity(productId: number, quantity: number) {
-    if(this.cartItems[productId]) this.cartItems[productId].quantity = quantity;
+    if(this.cartItems[productId]) {
+      if(quantity > 0) {
+        this.cartItems[productId].quantity = quantity;
+      } else {
+        // console.log('value was not positive');
+      }
+    };
 
     this.storeLocal();
     this.updateCartCount();
