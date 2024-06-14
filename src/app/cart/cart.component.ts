@@ -10,6 +10,7 @@ import { JsonPipe } from '@angular/common';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-cart',
@@ -20,7 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
     JsonPipe,
     MatSlideToggleModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'

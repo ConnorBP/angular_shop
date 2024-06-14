@@ -1,16 +1,22 @@
 <mat-card class="cart-item-card">
-    
     <mat-card-header>
       <mat-card-title-group>
         <mat-card-title>{{ cartItemInformation.product.name }}</mat-card-title>
-        <mat-card-subtitle>Product Id: {{ cartItemInformation.product.id }}</mat-card-subtitle>
-        <img mat-card-sm-image [src]="cartItemInformation.product.image_path" >
-        
+        <mat-card-subtitle>Product Id: {{ cartItemInformation.product.id }}</mat-card-subtitle>    
       </mat-card-title-group>
     </mat-card-header>
-    <mat-card-content>
-      {{cartItemInformation.product.description}}
-    </mat-card-content>
+    <div class="flayout">
+        <div class="thumbnailbox">
+            <img mat-card-sm-image [src]="cartItemInformation.product.image_path" >
+        </div>
+        <div>
+            <mat-card-content>
+                {{cartItemInformation.product.description}}
+              </mat-card-content>
+        </div>
+    </div>
+    
+    
     <mat-card-actions class="flayout">
         <mat-form-field>
             <input type="number" min="1" step="1" [value]="cartItemInformation.quantity" matInput (change)="updateQuantity($event)">

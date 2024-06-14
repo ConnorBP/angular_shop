@@ -1,6 +1,12 @@
 .cart-item-card {
-    max-width: 600px;
-    margin-bottom: 8px;
+    max-width: 480pt;
+    margin-bottom: 8pt;
+}
+
+.thumbnailbox {
+    min-width: 80pt;
+    min-height: 60pt;
+    padding: 12pt;
 }
 
 .cart-item-card img {

@@ -1,14 +1,30 @@
 <h2>Cart</h2>
-<div id="cart" class="grid-container-4 grid-spaced">
-    <div class="grid-container-3 grid-spaced">
+<div id="cart" class="">
+    <div class="grid-containerl-2 grid-spaced">
         <div class="grid-item">
             <app-cart-product-list></app-cart-product-list>
             <p>
                 {{ shoppingCartService.cartItems | json }}
             </p>
         </div>
-        <div class="grid-item">{{shoppingCartService.cartItemCount}} Items</div>
-        <div class="grid-item bg">Price: {{shoppingCartService.cartPriceFormatted}}</div>
+        <div class="grid-item">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title-group>
+                      <mat-card-title>Total: {{shoppingCartService.cartPriceFormatted}}</mat-card-title>
+                      <mat-card-subtitle>Items: {{ shoppingCartService.cartItemCount }}</mat-card-subtitle>                      
+                    </mat-card-title-group>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <b>Taxes and shipping calculated at checkout.</b>Total cart comes to
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button>
+                    <button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button>
+                  </mat-card-actions>
+            </mat-card>
+            
+        </div>
         <div class="grid-item"><button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button></div>
         <div class="grid-item bg"><button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button></div>
     </div>

@@ -116,7 +116,7 @@ blockquote {
 }
 
 .grid-containerl-2 {
-  grid-template-columns: 80pt auto;
+  grid-template-columns: 70% auto;
 }
 
 .grid-container-3 {
@@ -317,6 +317,7 @@ ul.nature li {
   footer li.right
   {float: none;}
   .grid-container-2,
+  .grid-containerl-2,
   .grid-container-3
   /* .grid-container-4 */
   {grid-template-columns: auto;}
