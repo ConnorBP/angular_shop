@@ -9,7 +9,7 @@
         </div>
         <div class="grid-item">{{shoppingCartService.cartItemCount}} Items</div>
         <div class="grid-item bg">Price: {{shoppingCartService.cartPriceFormatted}}</div>
-        <div class="grid-item"><button mat-raised-button (click)="shoppingCartService.clear()">Clear Cart</button></div>
-        <div class="grid-item bg">Checkout <mat-slide-toggle>Toggle me!</mat-slide-toggle></div>
+        <div class="grid-item"><button mat-raised-button (click)="shoppingCartService.clear()"><mat-icon>shopping_cart_off</mat-icon>Clear Cart</button></div>
+        <div class="grid-item bg"><button mat-raised-button><mat-icon>shopping_cart_checkout</mat-icon> Checkout</button></div>
     </div>
 </div>
