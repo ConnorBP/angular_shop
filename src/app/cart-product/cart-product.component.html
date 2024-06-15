@@ -18,7 +18,7 @@
     
     
     <mat-card-actions class="flayout">
-        <mat-form-field>
+        <mat-form-field [style.width.pt]=64>
             <input type="number" min="1" step="1" [value]="cartItemInformation.quantity" matInput (change)="updateQuantity($event)">
         </mat-form-field>
         <div>

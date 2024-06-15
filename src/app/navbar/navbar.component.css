@@ -43,3 +43,10 @@ ul.navbar li a:hover:not(.active) {
     background-color: #4F5D75;
     color: #F5F5F5;
 }
+
+/* mobile adaptation stuff */
+@media only screen and (max-width: 768px) {
+    ul.navbar li.right, 
+    ul.navbar li
+    {float: none;}
+  }

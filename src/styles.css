@@ -310,16 +310,13 @@ ul.nature li {
 
 /* mobile adaptation stuff */
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  ul.navbar li.right, 
-  ul.navbar li,
   footer li,
   footer li.right
   {float: none;}
   .grid-container-2,
   .grid-containerl-2,
   .grid-container-3
-  /* .grid-container-4 */
+  .grid-container-4
   {grid-template-columns: auto;}
 }
 
