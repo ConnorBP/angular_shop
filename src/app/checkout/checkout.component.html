@@ -31,7 +31,13 @@
                             </form>
                         </mat-step>
                         <mat-step [stepControl]="shippingMethodFormGroup">
-
+                            <mat-radio-group aria-label="Store Pickup or Ship">
+                                <mat-radio-button value="pickup">Pickup</mat-radio-button>
+                                <mat-radio-button value="ship">Ship</mat-radio-button>
+                            </mat-radio-group>
+                            <div>
+                                <button mat-button matStepperNext>Next</button>
+                            </div>
                         </mat-step>
                     </mat-stepper>
                 </div>
@@ -54,7 +60,7 @@
                         </div>
                       </mat-card-content>
                 </mat-card></div>
-                <div class="grid-item">c</div>
+                <div class="grid-item"></div>
                 <div class="grid-item bg"><button mat-raised-button>Complete Checkout<mat-icon>point_of_sale</mat-icon></button></div>
             </div>
         </mat-card-content>

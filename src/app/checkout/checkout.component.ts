@@ -6,6 +6,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { ShoppingCartService } from '../shopping-cart.service';
 import Utils from '../utils';
 
@@ -20,7 +21,8 @@ import Utils from '../utils';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
