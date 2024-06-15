@@ -315,7 +315,7 @@ ul.nature li {
   {float: none;}
   .grid-container-2,
   .grid-containerl-2,
-  .grid-container-3
+  .grid-container-3,
   .grid-container-4
   {grid-template-columns: auto;}
 }
